@@ -1,41 +1,22 @@
 package sathvik1709.com.tictactoe;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
-public class StartActivity extends Activity {
-
-    //Views
-    Button start_activity_start_game_btn;
+public class GameActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start);
-
-        //Initializing views
-        start_activity_start_game_btn = (Button) findViewById(R.id.start_activity_start_game_btn);
-
-
-
-        start_activity_start_game_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(StartActivity.this,GameActivity.class);
-                startActivity(intent);
-            }
-        });
+        setContentView(R.layout.activity_game);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_start, menu);
+        getMenuInflater().inflate(R.menu.menu_game, menu);
         return true;
     }
 
