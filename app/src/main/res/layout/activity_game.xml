@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="sathvik1709.com.tictactoe.activities.GameActivity">
@@ -10,103 +11,127 @@
 
         <TextView
             android:id="@+id/game_activity_player_turn_tv"
-            android:gravity="center"
-            android:text="Waiting for:"
             style="@android:style/TextAppearance.Large"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:gravity="center" />
 
     </LinearLayout>
 
     <!-- View matrix definition -->
     <LinearLayout
+        android:id="@+id/game_activity_matrix_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- view matrix row 0 -->
         <LinearLayout
+            android:id="@+id/game_activity_matrix_view_row_0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/game_activity_btn_matrix_cell_00"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#F44336" />
+                android:background="@color/matrix_cell_color_normal"
+
+                android:onClick="onPlayerSelected" />
 
             <Button
+                android:id="@+id/game_activity_btn_matrix_cell_01"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#E91E63" />
+               android:background="@color/matrix_cell_color_normal"
+                android:onClick="onPlayerSelected" />
 
             <Button
+                android:id="@+id/game_activity_btn_matrix_cell_02"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#673AB7" />
+               android:background="@color/matrix_cell_color_normal"
+                android:onClick="onPlayerSelected" />
 
         </LinearLayout>
 
+        <!-- view matrix row 1 -->
         <LinearLayout
+            android:id="@+id/game_activity_matrix_view_row_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/game_activity_btn_matrix_cell_10"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#009688" />
+               android:background="@color/matrix_cell_color_normal"
+                android:onClick="onPlayerSelected" />
 
             <Button
+                android:id="@+id/game_activity_btn_matrix_cell_11"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#FFC107" />
+               android:background="@color/matrix_cell_color_normal"
+                android:onClick="onPlayerSelected" />
 
             <Button
+                android:id="@+id/game_activity_btn_matrix_cell_12"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#FF5722" />
+               android:background="@color/matrix_cell_color_normal"
+                android:onClick="onPlayerSelected" />
 
         </LinearLayout>
 
+        <!-- view matrix row 2 -->
         <LinearLayout
+            android:id="@+id/game_activity_matrix_view_row_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/game_activity_btn_matrix_cell_20"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#009688" />
+               android:background="@color/matrix_cell_color_normal"
+                android:onClick="onPlayerSelected" />
 
             <Button
+                android:id="@+id/game_activity_btn_matrix_cell_21"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#FFC107" />
+               android:background="@color/matrix_cell_color_normal"
+                android:onClick="onPlayerSelected" />
 
             <Button
+                android:id="@+id/game_activity_btn_matrix_cell_22"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="#FF5722" />
+               android:background="@color/matrix_cell_color_normal"
+                android:onClick="onPlayerSelected" />
 
         </LinearLayout>
 
     </LinearLayout>
-
 
 
 </LinearLayout>
