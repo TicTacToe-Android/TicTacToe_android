@@ -1,16 +1,40 @@
-package sathvik1709.com.tictactoe;
+package sathvik1709.com.tictactoe.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import sathvik1709.com.tictactoe.R;
 
 public class GameActivity extends Activity {
+
+
+    TextView game_activity_player_turn_tv;
+
+    List<Integer> player_choice_icons;
+    List<Integer> player_choice_colors;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        // Initializing views
+        game_activity_player_turn_tv = (TextView) findViewById(R.id.game_activity_player_turn_tv);
+
+        //Initializing views for matrix
+
+        // Initializing objects
+        player_choice_icons = new ArrayList<Integer>();
+        player_choice_colors = new ArrayList<Integer>();
+
+
+
     }
 
     @Override

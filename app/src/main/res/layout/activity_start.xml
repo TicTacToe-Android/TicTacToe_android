@@ -32,18 +32,18 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/start_activity_player_1_choice"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:padding="5dp"
-            android:src="@drawable/ic_tic" />
+            android:padding="5dp" />
 
         <ImageView
+            android:id="@+id/start_activity_player_2_choice"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:padding="5dp"
-            android:src="@drawable/ic_toe" />
+            android:padding="5dp" />
 
     </LinearLayout>
 
@@ -52,8 +52,9 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:id="@+id/start_activity_swap_player_choice_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_centerInParent="true"
             android:scaleType="centerInside"
             android:src="@drawable/ic_swap">
@@ -72,7 +73,7 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/btn_"
+                android:id="@+id/start_activity_btn_00"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -80,6 +81,7 @@
                 android:background="#F44336" />
 
             <Button
+                android:id="@+id/start_activity_btn_01"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -87,6 +89,7 @@
                 android:background="#E91E63" />
 
             <Button
+                android:id="@+id/start_activity_btn_02"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -94,11 +97,11 @@
                 android:background="#673AB7" />
 
             <Button
+                android:id="@+id/start_activity_btn_03"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-
                 android:background="#2196F3" />
 
         </LinearLayout>
@@ -108,6 +111,7 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/start_activity_btn_10"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -115,6 +119,7 @@
                 android:background="#009688" />
 
             <Button
+                android:id="@+id/start_activity_btn_11"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -122,6 +127,7 @@
                 android:background="#FFC107" />
 
             <Button
+                android:id="@+id/start_activity_btn_12"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -129,6 +135,7 @@
                 android:background="#FF5722" />
 
             <Button
+                android:id="@+id/start_activity_btn_13"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -144,11 +151,11 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:text="Start Game >>"
             android:id="@+id/start_activity_start_game_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
+            android:layout_centerInParent="true"
+            android:text="Start Game >>">
 
         </Button>
 
