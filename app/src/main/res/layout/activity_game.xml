@@ -5,6 +5,10 @@
     android:orientation="vertical"
     tools:context="sathvik1709.com.tictactoe.activities.GameActivity">
 
+    <include
+        android:id="@+id/game_activity_toolbar"
+        layout="@layout/actionbar" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

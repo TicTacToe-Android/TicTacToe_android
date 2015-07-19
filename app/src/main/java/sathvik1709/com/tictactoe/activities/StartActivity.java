@@ -1,8 +1,9 @@
 package sathvik1709.com.tictactoe.activities;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,9 +17,10 @@ import java.util.List;
 
 import sathvik1709.com.tictactoe.R;
 
-public class StartActivity extends Activity {
+public class StartActivity extends ActionBarActivity {
 
     //Views
+    Toolbar start_activity_toolbar;
     Button start_activity_start_game_btn;
     ImageButton start_activity_swap_player_choice_btn;
     List<Integer> player_choice_icons;
@@ -33,6 +35,8 @@ public class StartActivity extends Activity {
         setContentView(R.layout.activity_start);
 
         //Initializing views
+        start_activity_toolbar = (Toolbar) findViewById(R.id.start_activity_toolbar);
+        setSupportActionBar(start_activity_toolbar);
         start_activity_start_game_btn = (Button) findViewById(R.id.start_activity_start_game_btn);
         start_activity_swap_player_choice_btn = (ImageButton) findViewById(R.id.start_activity_swap_player_choice_btn);
         start_activity_player_1_choice = (ImageView) findViewById(R.id.start_activity_player_1_choice);

@@ -1,8 +1,9 @@
 package sathvik1709.com.tictactoe.activities;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,9 +20,10 @@ import sathvik1709.com.tictactoe.R;
 import sathvik1709.com.tictactoe.objects.Cell;
 import sathvik1709.com.tictactoe.tictactoechecker.TicTacToeChecker;
 
-public class GameActivity extends Activity {
+public class GameActivity extends ActionBarActivity {
 
     // Declare views
+    Toolbar game_activity_toolbar;
     TextView game_activity_player_turn_tv;
     LinearLayout game_activity_matrix_view;
     ImageButton game_activity_btn_matrix_cell_00,game_activity_btn_matrix_cell_01,game_activity_btn_matrix_cell_02;
@@ -46,6 +48,8 @@ public class GameActivity extends Activity {
         setContentView(R.layout.activity_game);
 
         // Initializing views
+        game_activity_toolbar = (Toolbar) findViewById(R.id.game_activity_toolbar);
+        setSupportActionBar(game_activity_toolbar);
         game_activity_player_turn_tv = (TextView) findViewById(R.id.game_activity_player_turn_tv);
 
         //Initializing views for matrix
@@ -188,6 +192,7 @@ public class GameActivity extends Activity {
         }
     }
 
+    // change colors of winning cells
     private void markWinningCells(ImageButton imgBtn1,ImageButton imgBtn2, ImageButton imgBtn3,int backgroundColor){
         imgBtn1.setBackgroundColor(backgroundColor);
         imgBtn2.setBackgroundColor(backgroundColor);
