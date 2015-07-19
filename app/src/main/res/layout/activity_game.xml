@@ -31,33 +31,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
+            <ImageButton
                 android:id="@+id/game_activity_btn_matrix_cell_00"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@color/matrix_cell_color_normal"
+                android:background="@drawable/matrix_img_btn_style"
+                android:onClick="onPlayerSelected"
+                android:src="@drawable/ic_normal_background" />
 
-                android:onClick="onPlayerSelected" />
-
-            <Button
+            <ImageButton
                 android:id="@+id/game_activity_btn_matrix_cell_01"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-               android:background="@color/matrix_cell_color_normal"
-                android:onClick="onPlayerSelected" />
+                android:background="@drawable/matrix_img_btn_style"
+                android:onClick="onPlayerSelected"
+                android:src="@drawable/ic_normal_background" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/game_activity_btn_matrix_cell_02"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-               android:background="@color/matrix_cell_color_normal"
-                android:onClick="onPlayerSelected" />
+                android:background="@drawable/matrix_img_btn_style"
+                android:onClick="onPlayerSelected"
+                android:src="@drawable/ic_normal_background" />
 
         </LinearLayout>
 
@@ -67,32 +69,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
+            <ImageButton
                 android:id="@+id/game_activity_btn_matrix_cell_10"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-               android:background="@color/matrix_cell_color_normal"
-                android:onClick="onPlayerSelected" />
+                android:background="@drawable/matrix_img_btn_style"
+                android:onClick="onPlayerSelected"
+                android:src="@drawable/ic_normal_background" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/game_activity_btn_matrix_cell_11"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-               android:background="@color/matrix_cell_color_normal"
-                android:onClick="onPlayerSelected" />
+                android:background="@drawable/matrix_img_btn_style"
+                android:onClick="onPlayerSelected"
+                android:src="@drawable/ic_normal_background" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/game_activity_btn_matrix_cell_12"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-               android:background="@color/matrix_cell_color_normal"
-                android:onClick="onPlayerSelected" />
+                android:background="@drawable/matrix_img_btn_style"
+                android:onClick="onPlayerSelected"
+                android:src="@drawable/ic_normal_background" />
 
         </LinearLayout>
 
@@ -102,32 +107,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
+            <ImageButton
                 android:id="@+id/game_activity_btn_matrix_cell_20"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-               android:background="@color/matrix_cell_color_normal"
-                android:onClick="onPlayerSelected" />
+                android:background="@drawable/matrix_img_btn_style"
+                android:onClick="onPlayerSelected"
+                android:src="@drawable/ic_normal_background" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/game_activity_btn_matrix_cell_21"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-               android:background="@color/matrix_cell_color_normal"
-                android:onClick="onPlayerSelected" />
+                android:background="@drawable/matrix_img_btn_style"
+                android:onClick="onPlayerSelected"
+                android:src="@drawable/ic_normal_background" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/game_activity_btn_matrix_cell_22"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
-               android:background="@color/matrix_cell_color_normal"
-                android:onClick="onPlayerSelected" />
+                android:background="@drawable/matrix_img_btn_style"
+                android:onClick="onPlayerSelected"
+                android:src="@drawable/ic_normal_background" />
 
         </LinearLayout>
 

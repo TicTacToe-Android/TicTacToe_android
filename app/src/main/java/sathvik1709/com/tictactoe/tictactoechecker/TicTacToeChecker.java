@@ -1,6 +1,5 @@
 package sathvik1709.com.tictactoe.tictactoechecker;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import sathvik1709.com.tictactoe.objects.Cell;
@@ -10,18 +9,7 @@ import sathvik1709.com.tictactoe.objects.Cell;
  */
 public class TicTacToeChecker {
 
-    Map<Integer,Cell> matrixToCheck;
-    int player;
-
-    public TicTacToeChecker() {
-        matrixToCheck = new HashMap<Integer,Cell>();
-    }
-
     public String checkForGame(Map<Integer,Cell> matrixToCheck,int player){
-
-        this.matrixToCheck = matrixToCheck;
-        this.player = player;
-
         //Check for rows
         if(// Check for row 0
                 matrixToCheck.get(00).isSelected() && matrixToCheck.get(00).getSelectedByPlayer() == player
