@@ -43,6 +43,16 @@ public class TicTacToeChecker {
                         && matrixToCheck.get(12).isSelected() && matrixToCheck.get(12).getSelectedByPlayer() == player
                         && matrixToCheck.get(22).isSelected() && matrixToCheck.get(22).getSelectedByPlayer() == player){
             return "col2";
+        }else if(// check diagonal top-left to bottom-right
+                matrixToCheck.get(00).isSelected() && matrixToCheck.get(00).getSelectedByPlayer() == player
+                        && matrixToCheck.get(11).isSelected() && matrixToCheck.get(11).getSelectedByPlayer() == player
+                        && matrixToCheck.get(22).isSelected() && matrixToCheck.get(22).getSelectedByPlayer() == player){
+            return "diagonal1";
+        }else if(// check diagonal top-right to bottom-left
+                matrixToCheck.get(02).isSelected() && matrixToCheck.get(02).getSelectedByPlayer() == player
+                        && matrixToCheck.get(11).isSelected() && matrixToCheck.get(11).getSelectedByPlayer() == player
+                        && matrixToCheck.get(20).isSelected() && matrixToCheck.get(20).getSelectedByPlayer() == player){
+            return "diagonal2";
         }
 
         return "none";

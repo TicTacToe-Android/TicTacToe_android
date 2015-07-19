@@ -3,7 +3,6 @@ package sathvik1709.com.tictactoe.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -153,12 +152,46 @@ public class GameActivity extends Activity {
             // initialize matrix to reflect changes of the cell
             initializeMatrix();
             // check for game
-            Log.d("Game Results",ticTacToeChecker.checkForGame(gameMatrix, playerTurnIndicator));
-
-            // change playerTurnIndicator
-            changePlayerTurnIndicator();
+            //Log.d("Game Results",ticTacToeChecker.checkForGame(gameMatrix, playerTurnIndicator));
+            String gameResult = ticTacToeChecker.checkForGame(gameMatrix, playerTurnIndicator);
+            if(gameResult.equalsIgnoreCase("none")){
+                // change playerTurnIndicator
+                changePlayerTurnIndicator();
+            }else{
+                announceWinner(playerTurnIndicator,gameResult);
+            }
 
         }
+    }
+
+    // Announce winner
+    private void announceWinner(int winner,String markWinningLine) {
+        int imgResId = player_choice_icons.get(winner-1);
+        int playerColorChoice = player_choice_colors.get(winner-1);
+
+        if(markWinningLine.equalsIgnoreCase("row0")){
+            markWinningCells(game_activity_btn_matrix_cell_00,game_activity_btn_matrix_cell_01,game_activity_btn_matrix_cell_02,playerColorChoice);
+        }else if (markWinningLine.equalsIgnoreCase("row1")){
+            markWinningCells(game_activity_btn_matrix_cell_10,game_activity_btn_matrix_cell_11,game_activity_btn_matrix_cell_12,playerColorChoice);
+        }else if (markWinningLine.equalsIgnoreCase("row2")){
+            markWinningCells(game_activity_btn_matrix_cell_20,game_activity_btn_matrix_cell_21,game_activity_btn_matrix_cell_22,playerColorChoice);
+        }else if (markWinningLine.equalsIgnoreCase("col0")){
+            markWinningCells(game_activity_btn_matrix_cell_00,game_activity_btn_matrix_cell_10,game_activity_btn_matrix_cell_20,playerColorChoice);
+        }else if (markWinningLine.equalsIgnoreCase("col1")){
+            markWinningCells(game_activity_btn_matrix_cell_01,game_activity_btn_matrix_cell_11,game_activity_btn_matrix_cell_21,playerColorChoice);
+        }else if (markWinningLine.equalsIgnoreCase("col2")){
+            markWinningCells(game_activity_btn_matrix_cell_02,game_activity_btn_matrix_cell_12,game_activity_btn_matrix_cell_22,playerColorChoice);
+        }else if (markWinningLine.equalsIgnoreCase("diagonal1")){
+            markWinningCells(game_activity_btn_matrix_cell_00,game_activity_btn_matrix_cell_11,game_activity_btn_matrix_cell_22,playerColorChoice);
+        }else if (markWinningLine.equalsIgnoreCase("diagonal2")){
+            markWinningCells(game_activity_btn_matrix_cell_20,game_activity_btn_matrix_cell_11,game_activity_btn_matrix_cell_02,playerColorChoice);
+        }
+    }
+
+    private void markWinningCells(ImageButton imgBtn1,ImageButton imgBtn2, ImageButton imgBtn3,int backgroundColor){
+        imgBtn1.setBackgroundColor(backgroundColor);
+        imgBtn2.setBackgroundColor(backgroundColor);
+        imgBtn3.setBackgroundColor(backgroundColor);
     }
 
     private void printCells(){
