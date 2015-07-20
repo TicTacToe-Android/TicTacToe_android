@@ -32,6 +32,7 @@ public class GameActivity extends ActionBarActivity {
 
     // Java/Other declarations
     int playerTurnIndicator = 0;
+    boolean gameOverIndicator = false;
     List<Integer> player_choice_icons;
     List<Integer> player_choice_colors;
     Map<Integer,Cell> gameMatrix;
@@ -104,40 +105,42 @@ public class GameActivity extends ActionBarActivity {
     // on matrix button click action
     public void onPlayerSelected(View v){
         //Log.d("game_activity_click",String.valueOf(v.getId()));
-        switch(v.getId()) {
-            // for row 0
-            case R.id.game_activity_btn_matrix_cell_00:
-                changeCellProperties(cell_00,game_activity_btn_matrix_cell_00);
-                break;
-            case R.id.game_activity_btn_matrix_cell_01:
-                changeCellProperties(cell_01,game_activity_btn_matrix_cell_01);
-                break;
-            case R.id.game_activity_btn_matrix_cell_02:
-                changeCellProperties(cell_02,game_activity_btn_matrix_cell_02);
-                break;
-            // for row 1
-            case R.id.game_activity_btn_matrix_cell_10:
-                changeCellProperties(cell_10,game_activity_btn_matrix_cell_10);
-                break;
-            case R.id.game_activity_btn_matrix_cell_11:
-                changeCellProperties(cell_11,game_activity_btn_matrix_cell_11);
-                break;
-            case R.id.game_activity_btn_matrix_cell_12:
-                changeCellProperties(cell_12,game_activity_btn_matrix_cell_12);
-                break;
-            // for row 2
-            case R.id.game_activity_btn_matrix_cell_20:
-                changeCellProperties(cell_20,game_activity_btn_matrix_cell_20);
-                break;
-            case R.id.game_activity_btn_matrix_cell_21:
-                changeCellProperties(cell_21,game_activity_btn_matrix_cell_21);
-                break;
-            case R.id.game_activity_btn_matrix_cell_22:
-                changeCellProperties(cell_22,game_activity_btn_matrix_cell_22);
-                break;
-            default:
-                // do nothing
-                break;
+        if(!gameOverIndicator){
+            switch(v.getId()) {
+                // for row 0
+                case R.id.game_activity_btn_matrix_cell_00:
+                    changeCellProperties(cell_00,game_activity_btn_matrix_cell_00);
+                    break;
+                case R.id.game_activity_btn_matrix_cell_01:
+                    changeCellProperties(cell_01,game_activity_btn_matrix_cell_01);
+                    break;
+                case R.id.game_activity_btn_matrix_cell_02:
+                    changeCellProperties(cell_02,game_activity_btn_matrix_cell_02);
+                    break;
+                // for row 1
+                case R.id.game_activity_btn_matrix_cell_10:
+                    changeCellProperties(cell_10,game_activity_btn_matrix_cell_10);
+                    break;
+                case R.id.game_activity_btn_matrix_cell_11:
+                    changeCellProperties(cell_11,game_activity_btn_matrix_cell_11);
+                    break;
+                case R.id.game_activity_btn_matrix_cell_12:
+                    changeCellProperties(cell_12,game_activity_btn_matrix_cell_12);
+                    break;
+                // for row 2
+                case R.id.game_activity_btn_matrix_cell_20:
+                    changeCellProperties(cell_20,game_activity_btn_matrix_cell_20);
+                    break;
+                case R.id.game_activity_btn_matrix_cell_21:
+                    changeCellProperties(cell_21,game_activity_btn_matrix_cell_21);
+                    break;
+                case R.id.game_activity_btn_matrix_cell_22:
+                    changeCellProperties(cell_22,game_activity_btn_matrix_cell_22);
+                    break;
+                default:
+                    // do nothing
+                    break;
+            }
         }
     }
 
@@ -162,6 +165,7 @@ public class GameActivity extends ActionBarActivity {
                 // change playerTurnIndicator
                 changePlayerTurnIndicator();
             }else{
+                gameOverIndicator = true;
                 announceWinner(playerTurnIndicator,gameResult);
             }
 

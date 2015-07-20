@@ -11,6 +11,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="wrap_content">
 
         <TextView
@@ -20,130 +21,156 @@
             android:layout_height="wrap_content"
             android:gravity="center" />
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Restart"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:text="Back"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
     </LinearLayout>
 
-    <!-- View matrix definition -->
-    <LinearLayout
-        android:id="@+id/game_activity_matrix_view"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="fill_parent">
 
-        <!-- view matrix row 0 -->
+        <!-- View matrix definition -->
         <LinearLayout
-            android:id="@+id/game_activity_matrix_view_row_0"
+            android:id="@+id/game_activity_matrix_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:padding="60px"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/game_activity_btn_matrix_cell_00"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/matrix_img_btn_style"
-                android:onClick="onPlayerSelected"
-                android:src="@drawable/ic_normal_background" />
+            <!-- view matrix row 0 -->
+            <LinearLayout
+                android:id="@+id/game_activity_matrix_view_row_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/game_activity_btn_matrix_cell_01"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/matrix_img_btn_style"
-                android:onClick="onPlayerSelected"
-                android:src="@drawable/ic_normal_background" />
+                <ImageButton
+                    android:id="@+id/game_activity_btn_matrix_cell_00"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/matrix_img_btn_style"
+                    android:onClick="onPlayerSelected"
+                    android:src="@drawable/ic_normal_background" />
 
-            <ImageButton
-                android:id="@+id/game_activity_btn_matrix_cell_02"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/matrix_img_btn_style"
-                android:onClick="onPlayerSelected"
-                android:src="@drawable/ic_normal_background" />
+                <ImageButton
+                    android:id="@+id/game_activity_btn_matrix_cell_01"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/matrix_img_btn_style"
+                    android:onClick="onPlayerSelected"
+                    android:src="@drawable/ic_normal_background" />
+
+                <ImageButton
+                    android:id="@+id/game_activity_btn_matrix_cell_02"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/matrix_img_btn_style"
+                    android:onClick="onPlayerSelected"
+                    android:src="@drawable/ic_normal_background" />
+
+            </LinearLayout>
+
+            <!-- view matrix row 1 -->
+            <LinearLayout
+                android:id="@+id/game_activity_matrix_view_row_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/game_activity_btn_matrix_cell_10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/matrix_img_btn_style"
+                    android:onClick="onPlayerSelected"
+                    android:src="@drawable/ic_normal_background" />
+
+                <ImageButton
+                    android:id="@+id/game_activity_btn_matrix_cell_11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/matrix_img_btn_style"
+                    android:onClick="onPlayerSelected"
+                    android:src="@drawable/ic_normal_background" />
+
+                <ImageButton
+                    android:id="@+id/game_activity_btn_matrix_cell_12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/matrix_img_btn_style"
+                    android:onClick="onPlayerSelected"
+                    android:src="@drawable/ic_normal_background" />
+
+            </LinearLayout>
+
+            <!-- view matrix row 2 -->
+            <LinearLayout
+                android:id="@+id/game_activity_matrix_view_row_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/game_activity_btn_matrix_cell_20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/matrix_img_btn_style"
+                    android:onClick="onPlayerSelected"
+                    android:src="@drawable/ic_normal_background" />
+
+                <ImageButton
+                    android:id="@+id/game_activity_btn_matrix_cell_21"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/matrix_img_btn_style"
+                    android:onClick="onPlayerSelected"
+                    android:src="@drawable/ic_normal_background" />
+
+                <ImageButton
+                    android:id="@+id/game_activity_btn_matrix_cell_22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/matrix_img_btn_style"
+                    android:onClick="onPlayerSelected"
+                    android:src="@drawable/ic_normal_background" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <!-- view matrix row 1 -->
-        <LinearLayout
-            android:id="@+id/game_activity_matrix_view_row_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/game_activity_btn_matrix_cell_10"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/matrix_img_btn_style"
-                android:onClick="onPlayerSelected"
-                android:src="@drawable/ic_normal_background" />
-
-            <ImageButton
-                android:id="@+id/game_activity_btn_matrix_cell_11"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/matrix_img_btn_style"
-                android:onClick="onPlayerSelected"
-                android:src="@drawable/ic_normal_background" />
-
-            <ImageButton
-                android:id="@+id/game_activity_btn_matrix_cell_12"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/matrix_img_btn_style"
-                android:onClick="onPlayerSelected"
-                android:src="@drawable/ic_normal_background" />
-
-        </LinearLayout>
-
-        <!-- view matrix row 2 -->
-        <LinearLayout
-            android:id="@+id/game_activity_matrix_view_row_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/game_activity_btn_matrix_cell_20"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/matrix_img_btn_style"
-                android:onClick="onPlayerSelected"
-                android:src="@drawable/ic_normal_background" />
-
-            <ImageButton
-                android:id="@+id/game_activity_btn_matrix_cell_21"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/matrix_img_btn_style"
-                android:onClick="onPlayerSelected"
-                android:src="@drawable/ic_normal_background" />
-
-            <ImageButton
-                android:id="@+id/game_activity_btn_matrix_cell_22"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/matrix_img_btn_style"
-                android:onClick="onPlayerSelected"
-                android:src="@drawable/ic_normal_background" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
+    </RelativeLayout>
 
 </LinearLayout>
